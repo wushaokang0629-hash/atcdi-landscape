@@ -136,5 +136,41 @@
     "source": "雪湖公园（茶香荷韵）.jpg",
     "asset": "assets/projects/xuehu/05.jpg",
     "homepage": false
+  },
+  {
+    "project": "yuexi",
+    "source": "（首页轮播）.png",
+    "asset": "assets/projects/yuexi/hero.jpg",
+    "homepage": true
+  },
+  {
+    "project": "yuexi",
+    "source": "微信图片_20260915152922_1350_92.jpg",
+    "asset": "assets/projects/yuexi/01.jpg",
+    "homepage": false
+  },
+  {
+    "project": "yuexi",
+    "source": "微信图片_20260915152926_1351_92.jpg",
+    "asset": "assets/projects/yuexi/02.jpg",
+    "homepage": false
+  },
+  {
+    "project": "yuexi",
+    "source": "微信图片_20260915152932_1352_92.jpg",
+    "asset": "assets/projects/yuexi/03.jpg",
+    "homepage": false
+  },
+  {
+    "project": "yuexi",
+    "source": "微信图片_20260915152938_1353_92.jpg",
+    "asset": "assets/projects/yuexi/04.jpg",
+    "homepage": false
+  },
+  {
+    "project": "yuexi",
+    "source": "微信图片_20260915152943_1354_92.jpg",
+    "asset": "assets/projects/yuexi/05.jpg",
+    "homepage": false
   }
 ]
