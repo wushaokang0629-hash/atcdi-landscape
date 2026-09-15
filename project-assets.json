@@ -1,0 +1,140 @@
+[
+  {
+    "project": "chengkan",
+    "source": "（首页轮播）服务区+无忧园.jpg",
+    "asset": "assets/projects/chengkan/hero.jpg",
+    "homepage": true
+  },
+  {
+    "project": "chengkan",
+    "source": "4e36ac2a9e8aebfb64dd6481ce506138.jpg",
+    "asset": "assets/projects/chengkan/01.jpg",
+    "homepage": false
+  },
+  {
+    "project": "chengkan",
+    "source": "6e59a49e8878584d543feddb359119d3.jpg",
+    "asset": "assets/projects/chengkan/02.jpg",
+    "homepage": false
+  },
+  {
+    "project": "chengkan",
+    "source": "太空舱民宿.jpg",
+    "asset": "assets/projects/chengkan/03.jpg",
+    "homepage": false
+  },
+  {
+    "project": "chengkan",
+    "source": "无忧园1.jpg",
+    "asset": "assets/projects/chengkan/04.jpg",
+    "homepage": false
+  },
+  {
+    "project": "chengkan",
+    "source": "无忧园2.jpg",
+    "asset": "assets/projects/chengkan/05.jpg",
+    "homepage": false
+  },
+  {
+    "project": "luzhou",
+    "source": "（首页轮播）5555.png",
+    "asset": "assets/projects/luzhou/hero.jpg",
+    "homepage": true
+  },
+  {
+    "project": "luzhou",
+    "source": "222.png",
+    "asset": "assets/projects/luzhou/01.jpg",
+    "homepage": false
+  },
+  {
+    "project": "luzhou",
+    "source": "4444.png",
+    "asset": "assets/projects/luzhou/02.jpg",
+    "homepage": false
+  },
+  {
+    "project": "luzhou",
+    "source": "庐州公园(蜀山区段)项目一期EPC 1.jpg",
+    "asset": "assets/projects/luzhou/03.jpg",
+    "homepage": false
+  },
+  {
+    "project": "luzhou",
+    "source": "庐州公园(蜀山区段)项目一期EPC 2.jpg",
+    "asset": "assets/projects/luzhou/04.jpg",
+    "homepage": false
+  },
+  {
+    "project": "luzhou",
+    "source": "庐州公园(蜀山区段)项目一期EPC 3.jpg",
+    "asset": "assets/projects/luzhou/05.jpg",
+    "homepage": false
+  },
+  {
+    "project": "luzhou",
+    "source": "微信图片_20260106105630_370_103.jpg",
+    "asset": "assets/projects/luzhou/06.jpg",
+    "homepage": false
+  },
+  {
+    "project": "wenzhong",
+    "source": "（首页轮播）邻舍花园.JPG",
+    "asset": "assets/projects/wenzhong/hero.jpg",
+    "homepage": true
+  },
+  {
+    "project": "wenzhong",
+    "source": "DJI_20240508095629_0060_D.JPG",
+    "asset": "assets/projects/wenzhong/01.jpg",
+    "homepage": false
+  },
+  {
+    "project": "wenzhong",
+    "source": "特色停车场.jpg",
+    "asset": "assets/projects/wenzhong/02.jpg",
+    "homepage": false
+  },
+  {
+    "project": "wenzhong",
+    "source": "能量花园.jpg",
+    "asset": "assets/projects/wenzhong/03.jpg",
+    "homepage": false
+  },
+  {
+    "project": "xuehu",
+    "source": "（首页轮播）0雪湖公园（日景鸟瞰）.jpg",
+    "asset": "assets/projects/xuehu/hero.jpg",
+    "homepage": true
+  },
+  {
+    "project": "xuehu",
+    "source": "0雪湖公园（夜景鸟瞰）.jpg",
+    "asset": "assets/projects/xuehu/01.jpg",
+    "homepage": false
+  },
+  {
+    "project": "xuehu",
+    "source": "雪湖公园（天柱雪影）.jpg",
+    "asset": "assets/projects/xuehu/02.jpg",
+    "homepage": false
+  },
+  {
+    "project": "xuehu",
+    "source": "雪湖公园（登科桥）.jpg",
+    "asset": "assets/projects/xuehu/03.jpg",
+    "homepage": false
+  },
+  {
+    "project": "xuehu",
+    "source": "雪湖公园（舒台夜月）.jpg",
+    "asset": "assets/projects/xuehu/04.jpg",
+    "homepage": false
+  },
+  {
+    "project": "xuehu",
+    "source": "雪湖公园（茶香荷韵）.jpg",
+    "asset": "assets/projects/xuehu/05.jpg",
+    "homepage": false
+  }
+]
