@@ -28,7 +28,7 @@ const info={
  '分院简介':['ABOUT THE STUDIO','安徽省交通规划设计研究总院股份有限公司 · 城市空间与园林分院','依托综合专业平台，为工程建设提供多领域、集成式的景观营建。业务涵盖城市更新、乡村振兴、交旅融合、生态环境、公园绿地、交通景观和建筑环境，提供从策划、规划、设计到项目落地的一体化专业服务。'],
  '设计理念':['OUR PHILOSOPHY','美好景观践行者','怀揣对生态环境、人居环境持续改善与提高的责任感，以设计回应场地与使用者的需求，让景观走进生活。']
 };
-function showInfo(name,trigger){const data=info[name];$('#detail-label').textContent=data?.[0]||'STUDIO / '+name;$('#detail-title').textContent=name;$('#detail-caption').textContent=data?.[1]||'';$('#detail-visual').innerHTML='';$('#detail-text').innerHTML=data?'<p>'+data[2]+'</p>':'<div class="placeholder"><h3>内容待填充</h3><p>'+escapeHtml(name)+'资料将在此展示。</p></div>';showPanel('#detail-panel',trigger);$('#detail-panel').scrollTop=0}
+function showInfo(name,trigger){if(name==='资质荣誉'){showHonors(trigger);return}const data=info[name];$('#detail-label').textContent=data?.[0]||'STUDIO / '+name;$('#detail-title').textContent=name;$('#detail-caption').textContent=data?.[1]||'';$('#detail-visual').innerHTML='';$('#detail-text').innerHTML=data?'<p>'+data[2]+'</p>':'<div class="placeholder"><h3>内容待填充</h3><p>'+escapeHtml(name)+'资料将在此展示。</p></div>';showPanel('#detail-panel',trigger);$('#detail-panel').scrollTop=0}
 $('#slides').innerHTML=projects.map((p,i)=>`<div class="slide ${i===0?'active':''}" aria-hidden="${i!==0}"><img src="assets/${p.image}.jpg" alt="${escapeHtml(p.title)}" ${i===0?'fetchpriority="high"':''}></div>`).join('');
 $('#menu-categories').innerHTML=categories.slice(1).map(c=>`<button data-category="${c[0]}">${c[0]}</button>`).join('');
 $('#category-list').innerHTML=categories.map(c=>`<button data-choose-category="${c[0]}" aria-pressed="false">${c[0]==='全部'?'全部项目':c[0]}<span>${String(matching(c[0]).length).padStart(2,'0')}</span></button>`).join('');
@@ -55,3 +55,12 @@ document.querySelectorAll('.site-search').forEach(form=>form.addEventListener('s
 
 
 document.querySelector('#menu-panel .brand').addEventListener('click',()=>closePanels(false));
+
+function honorCards(duplicate=false){return '<div class="honors-group"'+(duplicate?' aria-hidden="true"':'')+'>'+honors.map((h,i)=>`<button class="honor-card" data-honor="${i}" ${duplicate?'tabindex="-1"':''} aria-label="查看${escapeHtml(h.group+' · '+h.title)}"><img src="${h.image}" loading="lazy" alt="${duplicate?'':escapeHtml(h.title)}"><span>${escapeHtml(h.title)}</span></button>`).join('')+'</div>'}
+$('#honors-track').innerHTML=honorCards()+honorCards(true);
+let honorsPaused=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function updateHonorsPause(){$('#honors-track').classList.toggle('is-paused',honorsPaused);$('#honors-pause').textContent=honorsPaused?'播放滚动':'暂停滚动';$('#honors-pause').setAttribute('aria-pressed',String(honorsPaused))}
+$('#honors-pause').addEventListener('click',()=>{honorsPaused=!honorsPaused;updateHonorsPause()});updateHonorsPause();
+function showHonors(trigger){$('#detail-label').textContent='QUALIFICATIONS & HONORS';$('#detail-title').textContent='资质荣誉';$('#detail-caption').textContent='安徽省交通规划设计研究总院股份有限公司';$('#detail-visual').innerHTML='';$('#detail-text').innerHTML='<p>公司拥有工程设计综合甲级、工程勘察综合甲级、工程咨询甲级、城乡规划编制甲级以及公路、水运行业多个检测和监理甲级资质，并具有对外承包工程经营资格。</p><p>画册记载：累计荣获 400 余项国家、部、省级优秀工程勘察、设计、咨询奖和科技进步奖，拥有各类授权专利百余项；获得乔治·理查德森奖、全球道路成就奖、菲迪克奖等国际大奖，六获詹天佑大奖。</p>'+['勘测设计','试验检测','工程监理','工程施工','设计荣誉'].map(group=>'<section class="honor-detail-group"><h3>'+group+'</h3><div class="honor-detail-grid">'+honors.map((h,i)=>h.group===group?`<button data-honor="${i}" aria-label="放大查看${escapeHtml(h.title)}"><img src="${h.image}" loading="lazy" alt="${escapeHtml(h.title)}"><span>${escapeHtml(h.title)}</span></button>`:'').join('')+'</div></section>').join('')+'<p class="source">来源：分院宣传画册「资质荣誉」07/08 页。以上为设计总院资质与荣誉，按画册原资料展示。</p>';showPanel('#detail-panel',trigger);$('#detail-panel').scrollTop=0}
+function showHonor(index,trigger){const h=honors[index];$('#detail-label').textContent=h.group;$('#detail-title').textContent=h.title;$('#detail-caption').textContent='设计总院资质与荣誉 · 宣传画册收录';$('#detail-visual').innerHTML='';$('#detail-text').innerHTML=`<img class="honor-enlarged" src="${h.image}" alt="${escapeHtml(h.title)}"><button class="line-button" data-info="资质荣誉">返回全部资质荣誉 ↗</button>`;showPanel('#detail-panel',trigger);$('#detail-panel').scrollTop=0}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-honor]');if(b)showHonor(Number(b.dataset.honor),b)});
